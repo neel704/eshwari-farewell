@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Farewell Eshwari 🌸🚀</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Courier New', monospace;
+    min-height:100vh;
+    overflow-x:hidden;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffd6e8,
+        #fff0c9,
+        #d6f0ff,
+        #ffe0f7
+    );
+
+    padding:20px;
+}
+
+/* =========================
+   BACKGROUND ANIMATION
+========================= */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:0;
+}
+
+.circle{
+    position:absolute;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:rgba(255,255,255,.25);
+    animation:moveCircle 12s infinite ease-in-out;
+}
+
+.circle:nth-child(1){
+    left:5%;
+    top:20%;
+}
+
+.circle:nth-child(2){
+    right:5%;
+    top:60%;
+    width:180px;
+    height:180px;
+    animation-delay:2s;
+}
+
+.circle:nth-child(3){
+    left:40%;
+    bottom:5%;
+    width:80px;
+    height:80px;
+    animation-delay:4s;
+}
+
+@keyframes moveCircle{
+    0%,100%{
+        transform:translateY(0) scale(1);
+    }
+
+    50%{
+        transform:translateY(-80px) scale(1.2);
+    }
+}
+
+/* =========================
+   BALLOONS
+========================= */
+
+.balloon{
+    position:fixed;
+    font-size:55px;
+    z-index:1;
+    animation:float 6s infinite ease-in-out;
+}
+
+.b1{left:4%;top:10%;}
+.b2{right:7%;top:15%;animation-delay:1s;}
+.b3{left:10%;bottom:12%;animation-delay:2s;}
+.b4{right:12%;bottom:15%;animation-delay:3s;}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0) rotate(-5deg);
+    }
+
+    50%{
+        transform:translateY(-35px) rotate(5deg);
+    }
+}
+
+/* =========================
+   FLOWERS
+========================= */
+
+.flower{
+    position:fixed;
+    font-size:55px;
+    z-index:1;
+    animation:flowerSpin 5s infinite ease-in-out;
+}
+
+.f1{top:20px;left:20px;}
+.f2{top:20px;right:20px;}
+.f3{bottom:20px;left:20px;}
+.f4{bottom:20px;right:20px;}
+
+@keyframes flowerSpin{
+    0%,100%{
+        transform:rotate(-10deg) scale(1);
+    }
+
+    50%{
+        transform:rotate(10deg) scale(1.15);
+    }
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    max-width:850px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+h1{
+    margin-top:45px;
+    line-height:1.1;
+
+    font-size:clamp(2.7rem,8vw,5rem);
+
+    background:
+    linear-gradient(
+        90deg,
+        #ff1493,
+        #8a2be2,
+        #ff4500,
+        #ff1493
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:titleGlow 5s infinite linear;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,.8),
+        0 0 25px rgba(255,105,180,.5);
+}
+
+@keyframes titleGlow{
+    0%{
+        background-position:0%;
+    }
+
+    100%{
+        background-position:300%;
+    }
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.subtitle{
+    margin-top:20px;
+    color:#d63384;
+    font-size:21px;
+    font-weight:bold;
+
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.04);
+    }
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons{
+    margin-top:35px;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+button{
+    padding:15px 25px;
+
+    border:none;
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ff1493,
+        #ff69b4
+    );
+
+    color:white;
+
+    font-size:17px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 25px rgba(255,20,147,.35);
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+    0 15px 35px rgba(255,20,147,.5);
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+/* Music button */
+
+.music{
+    background:
+    linear-gradient(
+        90deg,
+        #673ab7,
+        #9c27b0
+    );
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+#message{
+
+    width:min(95%,750px);
+
+    margin:35px auto;
+
+    text-align:center;
+
+    white-space:pre-wrap;
+
+    font-size:18px;
+    line-height:1.8;
+
+    padding:30px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 15px 50px rgba(0,0,0,.15);
+
+    overflow-wrap:break-word;
+
+    min-height:50px;
+
+    transition:.5s;
+}
+
+.cursor{
+    animation:blink .7s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
+
+/* =========================
+   MEMORY CARDS
+========================= */
+
+#memories{
+    display:none;
+
+    margin:30px auto;
+
+    width:min(95%,750px);
+
+    animation:fadeIn .8s ease;
+}
+
+.memory-card{
+    background:rgba(255,255,255,.9);
+
+    border-radius:25px;
+
+    padding:25px;
+
+    margin:15px 0;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.12);
+
+    transition:.4s;
+}
+
+.memory-card:hover{
+    transform:translateY(-8px) rotate(1deg);
+}
+
+.memory-card h2{
+    color:#d63384;
+    margin-bottom:10px;
+}
+
+.memory-card p{
+    color:#555;
+    line-height:1.6;
+}
+
+/* =========================
+   FINAL CARD
+========================= */
+
+.final-card{
+
+    margin-top:40px;
+
+    padding:35px 20px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.95),
+        rgba(255,230,245,.95)
+    );
+
+    box-shadow:
+    0 15px 50px rgba(0,0,0,.15);
+
+    animation:fadeIn 1s ease;
+}
+
+.final-card h2{
+    color:#8a2be2;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.final-card p{
+    line-height:1.8;
+    color:#555;
+}
+
+/* =========================
+   HEARTS
+========================= */
+
+.heart{
+    position:fixed;
+
+    font-size:25px;
+
+    bottom:-50px;
+
+    pointer-events:none;
+
+    animation:heartUp 5s linear forwards;
+
+    z-index:10;
+}
+
+@keyframes heartUp{
+
+    0%{
+        transform:translateY(0) scale(.5);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) scale(1.5) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+
+    position:fixed;
+
+    width:10px;
+    height:10px;
+
+    top:-20px;
+
+    z-index:20;
+
+    animation:confettiFall 3s linear forwards;
+}
+
+@keyframes confettiFall{
+
+    0%{
+        transform:translateY(0) rotate(0);
+    }
+
+    100%{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    margin-top:40px;
+
+    padding:25px;
+
+    color:#8a2be2;
+
+    font-weight:bold;
+}
+
+/* =========================
+   FADE
+========================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    h1{
+        font-size:2.8rem;
+        margin-top:35px;
+    }
+
+    .subtitle{
+        font-size:17px;
+    }
+
+    button{
+        width:90%;
+        max-width:320px;
+        font-size:16px;
+    }
+
+    #message{
+        width:96%;
+        padding:20px;
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .balloon{
+        font-size:35px;
+    }
+
+    .flower{
+        font-size:35px;
+    }
+
+    .memory-card{
+        padding:20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+
+<div class="background">
+
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+</div>
+
+<!-- BALLOONS -->
+
+<div class="balloon b1">🎈</div>
+<div class="balloon b2">🎈</div>
+<div class="balloon b3">🎈</div>
+<div class="balloon b4">🎈</div>
+
+<!-- FLOWERS -->
+
+<div class="flower f1">🌸</div>
+<div class="flower f2">🌹</div>
+<div class="flower f3">🌺</div>
+<div class="flower f4">🌷</div>
+
+
+<div class="container">
+
+<h1>
+🌸 Farewell,<br>
+Eshwari Kadam! 🚀
+</h1>
+
+<div class="subtitle">
+
+💖 A special message is waiting for you... 💖
+
+</div>
+
+
+<!-- BUTTONS -->
+
+<div class="buttons">
+
+<button onclick="startTyping()">
+🔓 Unlock Message
+</button>
+
+<button onclick="showMemories()">
+📸 Memories
+</button>
+
+<button onclick="specialMessage()">
+💌 Special Message
+</button>
+
+<button class="music" onclick="toggleMusic()">
+🎵 Play Music
+</button>
+
+</div>
+
+
+<!-- MESSAGE -->
+
+<div id="message"></div>
+
+
+<!-- MEMORIES -->
+
+<div id="memories">
+
+<div class="memory-card">
+
+<h2>🌸 Beautiful Memories</h2>
+
+<p>
+Some people come into our lives as colleagues,
+but slowly become a beautiful part of our memories.
+
+Eshwari, your presence made the workplace
+more fun, positive and memorable. ❤️
+</p>
+
+</div>
+
+
+<div class="memory-card">
+
+<h2>😂 The Fun Moments</h2>
+
+<p>
+From random conversations to unexpected laughs,
+from busy work days to small celebrations...
+
+These little moments will always bring a smile. 😄
+</p>
+
+</div>
+
+
+<div class="memory-card">
+
+<h2>🚀 The New Journey</h2>
+
+<p>
+A new chapter is waiting for you.
+
+New people.
+New opportunities.
+New challenges.
+New achievements.
+
+Go and make it amazing! ✨
+</p>
+
+</div>
+
+</div>
+
+
+<!-- FINAL CARD -->
+
+<div class="final-card">
+
+<h2>✨ Eshwari's Future ✨</h2>
+
+<p>
+
+🌸 Dreams → Becoming Reality
+
+🚀 Career → Reaching New Heights
+
+💖 Happiness → Unlimited
+
+✨ Success → Loading...
+
+❤️ Friendship → Forever
+
+</p>
+
+<br>
+
+<button onclick="celebrate()">
+
+🎉 Celebrate Eshwari!
+
+</button>
+
+</div>
+
+
+<footer>
+
+❤️ From Your Team 3DI ❤️  
+<br>
+3 Dimensional Immersive
+
+<br><br>
+
+✨ All the best for your new journey! ✨
+
+</footer>
+
+</div>
+
+
+<!-- MUSIC -->
+
+<audio id="music" loop>
+
+    <source src="farewell-music.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<script>
+
+/* =========================
+   FAREWELL MESSAGE
+========================= */
+
+const text = `
+
+🌸 Farewell, Eshwari Kadam! 🚀 🌸
+
+Thank you for being such an amazing colleague
+and such a wonderful person. ❤️
+
+Your hard work, positivity and dedication
+have made a beautiful impact on everyone around you.
+
+Workplaces change...
+Teams change...
+People move forward...
+
+But some memories stay forever. ❤️
+
+As you begin this exciting new chapter,
+may success follow you wherever you go.
+
+💜 May you achieve all your dreams.
+
+💙 May every new opportunity bring you happiness.
+
+💚 May your career reach new heights.
+
+🧡 May you always keep smiling.
+
+💗 May you create countless beautiful memories.
+
+🚀 And may your future be bigger and brighter
+than you ever imagined!
+
+You are leaving the company,
+but you are definitely not leaving our memories.
+
+❤️ We will miss you, Eshwari!
+
+✨ SYSTEM STATUS ✨
+
+Friendship       : ACTIVE ❤️
+
+Memories         : STORED FOREVER 📸
+
+Success          : LOADING... ∞% 🚀
+
+Happiness        : LOADING... ∞% 😊
+
+Career           : LEVEL UP 🚀
+
+Future           : BRIGHT ✨
+
+Eshwari Kadam    : LEGENDARY ⭐
+
+❤️ From Your Team 3DI ❤️
+
+(3 Dimensional Immersive)
+
+`;
+
+let started=false;
+
+
+/* =========================
+   TYPING EFFECT
+========================= */
+
+function startTyping(){
+
+    if(started) return;
+
+    started=true;
+
+    const msg=document.getElementById("message");
+
+    let i=0;
+
+    function type(){
+
+        if(i<text.length){
+
+            msg.innerHTML=
+                text.substring(0,i+1)+
+                '<span class="cursor">|</span>';
+
+            i++;
+
+            setTimeout(type,20);
+
+        }
+
+        else{
+
+            msg.innerHTML=text;
+
+            createHearts();
+
+        }
+
+    }
+
+    type();
+
+}
+
+
+/* =========================
+   MEMORIES
+========================= */
+
+function showMemories(){
+
+    const memories=document.getElementById("memories");
+
+    memories.style.display="block";
+
+    memories.scrollIntoView({
+        behavior:"smooth"
+    });
+
+    createHearts();
+
+}
+
+
+/* =========================
+   SPECIAL MESSAGE
+========================= */
+
+function specialMessage(){
+
+    const msg=document.getElementById("message");
+
+    msg.innerHTML=`
+
+    💌 <b>A Special Message For Eshwari</b> 💌
+
+    <br><br>
+
+    Wherever life takes you,
+    always remember the people who
+    laughed with you, worked with you
+    and shared beautiful moments with you.
+
+    <br><br>
+
+    Keep smiling. ❤️
+
+    Keep growing. 🌱
+
+    Keep dreaming. ✨
+
+    Keep achieving. 🚀
+
+    <br><br>
+
+    And most importantly...
+
+    <br>
+
+    <b>Never stop being YOU! 🌸</b>
+
+    `;
+
+    createHearts();
+
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+let musicPlaying=false;
+
+function toggleMusic(){
+
+    const music=document.getElementById("music");
+
+    if(!musicPlaying){
+
+        music.play();
+
+        musicPlaying=true;
+
+        event.target.innerHTML="⏸️ Pause Music";
+
+    }
+
+    else{
+
+        music.pause();
+
+        musicPlaying=false;
+
+        event.target.innerHTML="🎵 Play Music";
+
+    }
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHearts(){
+
+    for(let i=0;i<15;i++){
+
+        setTimeout(()=>{
+
+            const heart=document.createElement("div");
+
+            heart.className="heart";
+
+            heart.innerHTML=[
+                "❤️",
+                "💖",
+                "💗",
+                "💕",
+                "🌸",
+                "✨"
+            ][Math.floor(Math.random()*6)];
+
+            heart.style.left=
+                Math.random()*100+"%";
+
+            heart.style.animationDuration=
+                (3+Math.random()*3)+"s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(()=>{
+                heart.remove();
+            },6000);
+
+        },i*150);
+
+    }
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function celebrate(){
+
+    for(let i=0;i<100;i++){
+
+        setTimeout(()=>{
+
+            const confetti=
+                document.createElement("div");
+
+            confetti.className="confetti";
+
+            confetti.style.left=
+                Math.random()*100+"%";
+
+            confetti.style.animationDuration=
+                (2+Math.random()*3)+"s";
+
+            confetti.style.transform=
+                `rotate(${Math.random()*360}deg)`;
+
+            document.body.appendChild(confetti);
+
+            setTimeout(()=>{
+                confetti.remove();
+            },5000);
+
+        },i*20);
+
+    }
+
+    createHearts();
+
+    alert(
+        "🎉 All the best, Eshwari! ❤️🚀"
+    );
+
+}
+
+</script>
+
+</body>
+  </html>
